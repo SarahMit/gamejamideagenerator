@@ -57,20 +57,33 @@ function generateRandom() {
         return;
     }
 
+    // Get locked columns and values
+    const lockedColumns = [];
+    const lockedValues = {};
+    selectedColumns.forEach(column => {
+        const checkbox = document.getElementById(column);
+        if (!checkbox.checked) {
+            lockedColumns.push(column);
+            lockedValues[column] = window.csvData[0][column]; // Use the first row as the initial locked value
+        }
+    });
+
     // Get a random index
     const randomIndex = Math.floor(Math.random() * window.csvData.length);
 
     // Get a random entry
     const randomEntry = window.csvData[randomIndex];
 
-    // Filter the entry to include only selected columns
-    const filteredEntry = {};
-    selectedColumns.forEach(column => {
-        filteredEntry[column] = randomEntry[column];
+    // Copy the random entry to ensure the original data is not modified
+    const generatedEntry = { ...randomEntry };
+
+    // Apply locked values
+    lockedColumns.forEach(column => {
+        generatedEntry[column] = lockedValues[column];
     });
 
     // Display the result
-    displayResult(filteredEntry);
+    displayResult(generatedEntry);
 }
 
 function displayResult(entry) {
