@@ -1,21 +1,96 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     margin: 20px;
+    text-align: center;
 }
 
-h1 {
-    color: #333;
+.container {
+    margin-bottom: 1px;
 }
 
-button {
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
+.title-container {
+    margin-bottom: 1px;
 }
 
-#result-container {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
+.nine h1 {
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #222;
+    letter-spacing: 1px;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
 }
+
+.nine h1 span {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 15px;
+    color: #777777;
+    word-spacing: 1px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.nine h1 span:after,
+.nine h1 span:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    height: 5px;
+    background-color: #ffffff;
+}
+
+.eleven {
+    position: relative; /* Ensure positioning context for absolute positioning */
+}
+
+.eleven h2 {
+    font-size:40px;
+    text-align:center; 
+    line-height:1.5em; 
+    padding-bottom:45px; 
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    text-transform:uppercase;
+    letter-spacing: 2px; 
+    color:#111;
+  }
+  
+  .eleven h2:before {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 60%;
+    left:50%; 
+    margin-left:-30%;
+    height: 1px;
+    content: "";
+    background-color: #777; z-index: 4;
+  }
+  .eleven h2:after {
+    position:absolute;
+    width:40px; 
+    height:40px; 
+    left:50%; 
+    margin-left:-20px; 
+    bottom:0px;
+    content: '\2328'; 
+    font-size:30px; 
+    line-height:40px; 
+    color:#c50000;
+    font-weight:400; 
+    z-index: 5;
+    display:block;
+    background-color:#ffffff;
+  }

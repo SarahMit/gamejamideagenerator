@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random CSV Generator</title>
+    <title>GameJam Idea Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Random CSV Generator</h1>
-    <label for="columns">Select Columns:</label>
+    <div class="eleven">
+        <h2>GameJam Idea Generator</h2>
+    </div>
+    <label for="columns">Select Attributes:</label>
     <div id="checkbox-container"></div>
+    <button onclick="generateRandom()">Generate a Random Game Idea</button>
     <div id="result-container"></div>
-    <button onclick="generateRandom()">Generate Random Entry</button>
-
+    
     <script src="script.js"></script>
 </body>
 </html>

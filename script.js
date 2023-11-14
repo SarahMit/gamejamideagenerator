@@ -94,8 +94,21 @@ function displayResult(entry) {
 
     // Display each selected column and its value
     for (const key in entry) {
-        const columnDiv = document.createElement('div');
-        columnDiv.innerHTML = `<strong>${key}:</strong> ${entry[key]}`;
-        resultContainer.appendChild(columnDiv);
+        const titleContainer = document.createElement('div');
+        titleContainer.classList.add('nine');
+
+        const value = document.createElement('h1');
+        value.innerHTML = entry[key];
+
+        const title = document.createElement('span');
+        title.innerHTML = key;
+
+        value.appendChild(title);
+        titleContainer.appendChild(value);
+
+        resultContainer.appendChild(titleContainer);
+
+        // Add a line break after each title
+        resultContainer.appendChild(document.createElement('br'));
     }
 }
