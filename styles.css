@@ -4,6 +4,52 @@ body {
     text-align: center;
 }
 
+.button {
+    background-color: #c50000;
+    border: rgb(255, 255, 255);
+    color: #ffffff;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+  }
+  
+  .button:hover {
+    background-color: #a20101;
+    }
+
+  h2{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 15px;
+    color: #777777;
+    word-spacing: 1px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+  }
+
+  .checkbox {
+    margin-bottom: 20px;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    cursor: pointer;
+    accent-color: #c50000;
+  }
+
 .container {
     margin-bottom: 1px;
 }

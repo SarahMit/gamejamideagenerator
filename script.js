@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Populate the columns checkbox
             const checkboxContainer = document.getElementById('checkbox-container');
+            checkboxContainer.classList.add('checkbox');
             headers.forEach(header => {
                 const checkbox = document.createElement('input');
                 checkbox.type = 'checkbox';
