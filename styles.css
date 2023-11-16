@@ -26,6 +26,22 @@ body {
     background-color: #a20101;
     }
 
+  #fancyspace{
+    margin-bottom: 50px;
+}
+  
+  #fancyseparator {
+    display: block;
+    left: auto;
+    right: auto;
+    bottom: 0px;
+    width: 60vw;
+    height: 1.5px;
+    content: "";
+    background-color: #777; 
+    z-index: 4;
+  }
+
   h2{
     text-align: center;
     margin-top: 5px;
@@ -58,7 +74,7 @@ body {
     margin-bottom: 1px;
 }
 
-.nine h1 {
+.fancycontent h1 {
     text-align: center;
     font-size: 25px;
     text-transform: uppercase;
@@ -68,7 +84,7 @@ body {
     font-weight: 400;
 }
 
-.nine h1 span {
+.fancycontent h1 span {
     text-align: center;
     margin-top: 5px;
     font-size: 15px;
@@ -87,8 +103,8 @@ body {
     align-items: center;
 }
 
-.nine h1 span:after,
-.nine h1 span:before {
+.fancycontent h1 span:after,
+.fancycontent h1 span:before {
     content: " ";
     display: block;
     border-bottom: 1px solid #ccc;
@@ -97,11 +113,11 @@ body {
     background-color: #ffffff;
 }
 
-.eleven {
+.fancytitle {
     position: relative; /* Ensure positioning context for absolute positioning */
 }
 
-.eleven h2 {
+.fancytitle h1 {
     font-size:40px;
     text-align:center; 
     line-height:1.5em; 
@@ -113,7 +129,7 @@ body {
     color:#111;
   }
   
-  .eleven h2:before {
+  .fancytitle h1:before {
     position: absolute;
     left: 0;
     bottom: 20px;
@@ -122,9 +138,10 @@ body {
     margin-left:-30%;
     height: 1px;
     content: "";
-    background-color: #777; z-index: 4;
+    background-color: #777; 
+    z-index: 4;
   }
-  .eleven h2:after {
+  .fancytitle h1:after {
     position:absolute;
     width:40px; 
     height:40px; 
@@ -140,3 +157,4 @@ body {
     display:block;
     background-color:#ffffff;
   }
+

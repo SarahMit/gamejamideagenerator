@@ -1,9 +1,11 @@
+var selectedValues = {};
+
 document.addEventListener("DOMContentLoaded", function () {
-    // Load CSV file
+    ///// Load CSV file /////
     fetch("https://sarahmit.github.io/gamejamideagenerator/gameideas.csv")
         .then(response => response.text())
         .then(csv => {
-            // Parse CSV
+            ///// Parse CSV /////
             const rows = csv.split('\n');
             const headers = rows[0].split(';');
 
@@ -36,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 checkbox.type = 'checkbox';
                 checkbox.id = header;
                 checkbox.checked = true; // Initially, all checkboxes are checked
-                checkbox.addEventListener('change', generateRandom);
+                //checkbox.addEventListener('change', generateRandom);
                 
                 const label = document.createElement('label');
                 label.htmlFor = header;
@@ -44,47 +46,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 checkboxContainer.appendChild(checkbox);
                 checkboxContainer.appendChild(label);
+
+                selectedValues[header] = "~";
             });
         })
         .catch(error => console.error("Error fetching CSV:", error));
 });
 
-function generateRandom() {
-    // Get selected columns
-    const selectedColumns = Array.from(document.querySelectorAll('#checkbox-container input:checked')).map(checkbox => checkbox.id);
 
-    if (selectedColumns.length === 0) {
-        alert("Please select at least one column.");
-        return;
-    }
+function generateRandom() {
 
     // Get locked columns and values
     const lockedColumns = [];
     const lockedValues = {};
-    selectedColumns.forEach(column => {
+    // For all columns in csv
+    window.csvHeaders.forEach(column => {
         const checkbox = document.getElementById(column);
-        if (!checkbox.checked) {
-            lockedColumns.push(column);
-            lockedValues[column] = window.csvData[0][column]; // Use the first row as the initial locked value
+        if (checkbox.checked) {
+            const columnValues = window.csvData.map(entry => entry[column]);
+            const randomIndex = Math.floor(Math.random() * columnValues.length);
+            selectedValues[column] = (columnValues[randomIndex]);
         }
     });
 
-    // Get a random index
-    const randomIndex = Math.floor(Math.random() * window.csvData.length);
-
-    // Get a random entry
-    const randomEntry = window.csvData[randomIndex];
-
-    // Copy the random entry to ensure the original data is not modified
-    const generatedEntry = { ...randomEntry };
-
-    // Apply locked values
-    lockedColumns.forEach(column => {
-        generatedEntry[column] = lockedValues[column];
-    });
-
-    // Display the result
-    displayResult(generatedEntry);
+    displayResult(selectedValues);
 }
 
 function displayResult(entry) {
@@ -96,7 +81,7 @@ function displayResult(entry) {
     // Display each selected column and its value
     for (const key in entry) {
         const titleContainer = document.createElement('div');
-        titleContainer.classList.add('nine');
+        titleContainer.classList.add('fancycontent');
 
         const value = document.createElement('h1');
         value.innerHTML = entry[key];
@@ -108,8 +93,5 @@ function displayResult(entry) {
         titleContainer.appendChild(value);
 
         resultContainer.appendChild(titleContainer);
-
-        // Add a line break after each title
-        resultContainer.appendChild(document.createElement('br'));
     }
 }
