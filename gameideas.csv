@@ -1,11 +1,36 @@
 ﻿Genre;Mechanic;Setting;Quirk
-Top-Down Shooter;Leave Something Behind;Post-Apocalypse;Every Sprite is handpainted analog and scanned
-Platformer;Unintuitive Controls;Horror;Every Sound is Self-Recorded
-Shooter;Grid-based;Fantasy;test
-Fighting Game;Card drawing;Medieval;test
-Beat 'em up (Brawler);Time limit;Heroic;test
-Stealth Game;Turns;Romantic;test
-Survival Game;Different types of movements;Sword and Sorcery;test
-Rythm Game;Resource collection;Cyperpunk;test
-Battle Royale Game;Shooting;Steampunk;test
-
+Top-Down Shooter;Leave Something Behind;Post-Apocalypse;Everything is Handpainted Analog
+Platformer;Unintuitive Controls;Underground;Every Sound is Self-Recorded
+Shooter;Grid-based;Fantasy;Programmers make Art, Artist make Code
+Fighting Game;Card drawing;Medieval;Everything is ASCII
+Beat 'em up (Brawler);Time limit;Heroic;Generate Something with AI
+Stealth Game;Turns;Romantic;Fourth Wall Breaks
+Survival Game;Different Types of Movements;Sword and Sorcery;Breaking Conventions
+Rythm Game;Resource Collection/Management;Cyperpunk;Include a Mechanic You Hate and Make It Fun
+Battle Royale Game;Shooting;Steampunk;Incorporating Principles of Quantum Physics
+Survival Horror;Turn-based;Historical;Mobile Game
+Metroidvania;Time Travel;Science Fiction;Mismatching Assets
+Text Adventure;Inventory Management;Supernatural;-
+Point-and-Click Adventure;Inverted Controls;Parallel Universe;-
+Visual Novel;Player-vs-Player (PvP);Space;-
+Interactive Movie;Switching Weapons;Victorian Era;-
+Puzzle Game;Pushing and Pulling;Fairytale;-
+Dating Simulator;Randomly Generated;Dream World;-
+Hidden Objects Puzzle;Quick Time Events;Animal Kingdom;-
+RPG;Score Points;Future;-
+Action RPG;Stealth;Ancient Civilizations;-
+Roguelike;Combat;Modern/Urban;-
+Simulation;Choices and Consequences;Solarpunk;-
+Strategy Game;Trading;Cyberpunk;-
+Auto Battler (Auto Chess);Riddles;Mystery/Noir;-
+Tower Defense;Crafting;Mythological;-
+Sports Game;Skill Trees;Nature;-
+Racing Game;Protagonist Switching;Underwater;-
+Board Game;Cooperative play;Superhero;-
+Collegtible Card Game;Map Exploration;Carnival/Festival;-
+Horror Game;Discovery;Espionage;-
+Idle Game;Day/Night Cycles;Rural;-
+Party Game;Health/Mana/Stamina;Night;-
+Soulslike;Destructible Environments;Haunted;-
+Vampire Survivors-like;Vehicles/Mounts;Celestial/Planetary Bodies;-
+Stealth;Permadeath;Nautical/Seafaring;-
